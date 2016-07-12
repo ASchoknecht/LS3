@@ -9,10 +9,10 @@ The following external libraries are used in the LS3 API:
 
 * [Stanford CoreNLP](http://stanfordnlp.github.io/CoreNLP/)
 * [JDOM2](http://www.jdom.org/)
-* [Google Collections]()
+* [Google Collections](https://mvnrepository.com/artifact/com.google.collections/google-collections/1.0)
 * [Apache Commons Math3](http://commons.apache.org/proper/commons-math/)
 * [Apache Commons IO](https://commons.apache.org/proper/commons-io/)
-* [Porter Stemmer]()
+* [Porter Stemmer](https://mvnrepository.com/artifact/gov.sandia.foundry/porter-stemmer)
 
 ### Citation
 If you want to cite this API please use the following reference:
