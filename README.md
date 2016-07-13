@@ -2,7 +2,7 @@
 Latent Semantic Analysis-based Similarity Search for Process Models
 
 ### Description
-The LS3 Java API can be used to query process models stored as PNML files. It was developed at the [Institute AIFB](http://www.aifb.kit.edu/web/Hauptseite/en) of the [Karlsruhe Institute of Technology](http://www.kit.edu/english/index.php) (KIT). As it is a research prototype, please reference it in your publications as described below.
+The LS3 Java API can be used to query process models stored as PNML files. It is developed as part of a PhD thesis at the [Institute AIFB](http://www.aifb.kit.edu/web/Hauptseite/en) of the [Karlsruhe Institute of Technology](http://www.kit.edu/english/index.php) (KIT). As it is a research prototype, please reference it in your publications as described below.
 
 ### Code and Used Libraries
 The code is stored as a maven project with pom.xml included for the external library dependencies. The following external libraries are used in the LS3 API:
