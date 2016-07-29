@@ -309,7 +309,12 @@ public class DocumentCollection {
 		System.out.println("File loaded");
 	}
 
-	// TODO: Insertion von Modellen muessen noch ausgearbeitet werden.
+	
+	/**
+	 * Insert a model to a model collection. This means that the underlying Term-Document Matrix has to be updated.
+	 *
+	 * @param modelPath the path to the model to be inserted.
+	 */
 	public void insertModel(String modelPath) {
 		// Make sure file name is correct
 		if (!modelPath.endsWith(".pnml"))

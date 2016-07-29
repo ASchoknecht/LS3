@@ -225,14 +225,14 @@ public class LS3 {
 			result = documentCollection.calculateResults(lssmCalculator.getLSSMMatrix(), theta);
 			
 			System.out.println("---------------------");
-			System.out.println("Print data for rank " + rank);
+			System.out.println("Print data for k = " + i);
 			System.out.println("---------------------");
-			printTerms(documentCollection);
-			printTDMatrix(documentCollection);
-			printSVD(lssmCalculator);
-			printReducedSVD(lssmCalculator);
+			//printTerms(documentCollection);
+			//printTDMatrix(documentCollection);
+			//printSVD(lssmCalculator);
+			//printReducedSVD(lssmCalculator);
 			printLSSMMatrix(lssmCalculator);
-			printResults(result);
+			//printResults(result);
 		}
 		
 		return result;
@@ -524,7 +524,7 @@ public class LS3 {
 			System.out.println("");
 		}
 		System.out.println("---------------------");
-		System.out.println("Print reduced singular vale matrix Sk");
+		System.out.println("Print reduced singular value matrix Sk");
 		System.out.println("---------------------");
 		double[][] skData = lssmCalculator.getSk().getData();
 		for(int i = 0, k = lssmCalculator.getSk().getRowDimension(); i < k; i++) {
@@ -561,7 +561,7 @@ public class LS3 {
 			System.out.println("");
 		}
 		System.out.println("---------------------");
-		System.out.println("Print singular vale matrix S");
+		System.out.println("Print singular value matrix S");
 		System.out.println("---------------------");
 		double[][] sData = lssmCalculator.getS().getData();
 		for(int i = 0, k = lssmCalculator.getS().getRowDimension(); i < k; i++) {

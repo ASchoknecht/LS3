@@ -34,7 +34,6 @@ public class TDMatrix {
 	/** The row and column numbers of a Term-Document Matrix. */
 	private int rowNumber, columnNumber;
 
-	// TODO: Ich muss eine Funktion schreiben, um das termArray einer TDMatrix neu zu setzen, wenn ich die Matrix anpasse. Bei Hinzufuegen und Loeschen einer Zeile.
 	/** The array of distinct terms from a collection. */
 	private String[] termArray;
 
