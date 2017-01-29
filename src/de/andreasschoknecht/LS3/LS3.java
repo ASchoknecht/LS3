@@ -103,7 +103,7 @@ public class LS3 {
 		printLSSMMatrix(lssmCalculator);
 		printResults(result);
 		
-		return result;	
+		return result;
 	}
 	
 	/**

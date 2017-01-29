@@ -133,11 +133,11 @@ public class PNMLReader {
 		}
 
 		for (int i = 0, j = tokens.size(); i < j; i++){
-			String bereinigt = tokens.get(i).toLowerCase();
+			String lowerCaseToken = tokens.get(i).toLowerCase();
 
 			// Clear tokens of empty tokens, stop words, and automatic tool labels
-			if(!bereinigt.matches("(p|t)*([0-9]+)") && !stopwords.contains(bereinigt) && !bereinigt.equals("")){
-				String term = bereinigt.replaceAll("[0-9]+", "");
+			if(checkToken(lowerCaseToken)){
+				String term = lowerCaseToken.replaceAll("[0-9]+", "");
 				ls3Document.addTerm( stemString(term) );
 				documentCollection.addTerm( stemString(term) );
 			}
@@ -168,21 +168,36 @@ public class PNMLReader {
 		}
 
 		for (int i = 0, j = tokens.size(); i < j; i++){
-			String bereinigt = tokens.get(i).toLowerCase();
+			String lowerCaseToken = tokens.get(i).toLowerCase();
 
 			// Clear tokens of empty tokens, stop words, and automatic tool labels
-			if(!bereinigt.matches("(p|t)*([0-9]+)") && !stopwords.contains(bereinigt) && !bereinigt.equals("")){
-				String term = bereinigt.replaceAll("[0-9]+", "");
+			//if(!lowerCaseToken.matches("(p|t)*([0-9]+)") && !stopwords.contains(lowerCaseToken) && !lowerCaseToken.equals("")){
+			if(checkToken(lowerCaseToken)){
+				String term = lowerCaseToken.replaceAll("[0-9]+", "");
 				ls3Document.addTerm( stemString(term) );
 			}
 		}
 	}
 	
+	/**
+	 * Method for checking tokens whether they resemble an automatic naming scheme for places and transitions "(p|t)*([0-9]+)", whether they
+	 * correspond to a stop word, or whether the token is empty.
+	 *
+	 * @param token The token to be checked
+	 * @return true, if token is correct
+	 */
+	private boolean checkToken(String token) {
+		if(!token.matches("(p|t)*([0-9]+)") && !stopwords.contains(token) && !token.equals("")){
+			return true;
+		} else 
+			return false;
+		
+	}
 	
 	/**
 	 * Method for stemming a term according to the Porter Stemmer algorithm.
 	 *
-	 * @param toStem The term to stem
+	 * @param toStem The term to be stemmed
 	 * @return The term stemmed by the Porter Stemmer
 	 */
 	private static String stemString(String toStem){
@@ -213,6 +228,7 @@ public class PNMLReader {
 			if (word != null)
 				stopwords.add(word);
 		} while (word != null);
+		
 		br.close();
 	}
 	

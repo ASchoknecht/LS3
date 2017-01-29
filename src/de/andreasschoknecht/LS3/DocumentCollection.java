@@ -147,7 +147,7 @@ public class DocumentCollection {
 			QueryResult queryResult = new QueryResult( documents.get(i) );
 			for(int j = 0; j < docNumber; j++) {
 				if(matrixData[i][j] >= theta)
-					queryResult.addResult( documents.get(j) );
+					queryResult.addResult( documents.get(j), matrixData[i][j] );
 			}
 			result.addResult(queryResult);
 		}
@@ -173,7 +173,7 @@ public class DocumentCollection {
 		
 		for(int i = 0; i < docNumber; i++) {		
 			if(lssmValues[i] >= theta)
-				queryResult.addResult( documents.get(i) );
+				queryResult.addResult( documents.get(i), lssmValues[i] );
 		}
 		result.addResult(queryResult);
 		

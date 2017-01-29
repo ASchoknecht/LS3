@@ -33,9 +33,13 @@ public class QueryResult {
 	private LS3Document query;
 	private ArrayList<LS3Document> results;
 	
+	/** The list of similarity values in the same order as the results list. */
+	private ArrayList<Double> similarityValues;
+	
 	QueryResult(LS3Document query) {
 		setQuery(query);
 		results = new ArrayList<LS3Document>();
+		similarityValues = new ArrayList<Double>();
 	}
 	
 	LS3Document getQuery() {
@@ -50,8 +54,13 @@ public class QueryResult {
 		return results;
 	}
 
-	void addResult(LS3Document result) {
+	void addResult(LS3Document result, double similarityValue) {
 		results.add(result);
+		similarityValues.add(similarityValue);
+	}
+	
+	public ArrayList<Double> getSimilarityValues() {
+		return similarityValues;
 	}
 
 }
