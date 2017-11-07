@@ -17,11 +17,19 @@ The code is stored as a maven project with pom.xml included for the external lib
 * [Porter Stemmer](https://mvnrepository.com/artifact/gov.sandia.foundry/porter-stemmer)
 
 ### Citation
-If you want to cite this API please use the following reference:
+If you want to cite this API please use the following references:
+
+
+> Schoknecht, A. und A. Oberweis (2017)<br/>
+> **LS3: Latent Semantic Analysis-based Similarity Search for Process Models**<br/>
+> Enterprise Modelling and Information Systems Architectures 12(2), S. 1-22<br/>
+> DOI: [10.18417/emisa.12.2] (http://dx.doi.org/10.18417/emisa.12.2).
 
 > Andreas Schoknecht, Nicolai Fischer, Andreas Oberweis<br/>
 > **Process Model Search using Latent Semantic Analysis**<br/>
-> [1st International Workshop on Process Querying] (http://processquerying.com/pq2016/) (PQ 2016)
+> Business Process Management Workshops, Rio de Janeiro, Brasilien<br/>
+> M. Dumas und B. Fantinato Marcelo. Bd. 281. Lecture Notes in Business Information Processing, Springer, S. 283–295<br/>
+> DOI: [10.1007/978-3-319-58457-7_21] (http://dx.doi.org/10.1007/978-3-319-58457-7_21).
 
 ### Licensing
 Licensed under the GNU General Public License v3.
